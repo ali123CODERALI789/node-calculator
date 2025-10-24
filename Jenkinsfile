@@ -6,7 +6,7 @@ pipeline {
     parameters {
         string(name: 'BRANCH_NAME', defaultValue: 'main')
         string(name: 'BUILD_ENV', defaultValue: 'dev')
-        string(name: 'STUDENT_NAME', defaultValue: 'Your Name') // ← PUT YOUR REAL NAME HERE
+        string(name: 'STUDENT_NAME', defaultValue: 'Muhammad Ali Sajjad') // ← PUT YOUR REAL NAME HERE
     }
     environment {
         APP_VERSION = "1.0.0"
