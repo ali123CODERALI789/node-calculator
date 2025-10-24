@@ -6,7 +6,7 @@ pipeline {
     parameters {
         string(name: 'BRANCH_NAME', defaultValue: 'main')
         string(name: 'BUILD_ENV', defaultValue: 'dev')
-        string(name: 'STUDENT_NAME', defaultValue: 'Muhammad Ali Sajjad') // ← PUT YOUR REAL NAME HERE
+        string(name: 'STUDENT_NAME', defaultValue: 'Muhammad Ali Sajjad') //provide your name here, no name, no marks
     }
     environment {
         APP_VERSION = "1.0.0"
@@ -15,7 +15,7 @@ pipeline {
         stage('Install Dependencies') {
             steps {
                 echo "Installing Node.js dependencies..."
-                bat "npm install"
+                bat "npm install"  
             }
         }
         stage('Build') {
@@ -29,7 +29,7 @@ pipeline {
             }
             steps {
                 echo 'Running unit tests with Jest...'
-                bat "npm test"
+                bat "npm test"  
             }
         }
         stage('Deploy') {
@@ -41,6 +41,7 @@ pipeline {
     post {
         always {
             echo 'Cleaning up workspace...'
+            // deleteDir()
         }
         success {
             echo 'Pipeline executed successfully.'
