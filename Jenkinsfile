@@ -9,7 +9,7 @@ pipeline {
         string(name: 'STUDENT_NAME', defaultValue: 'Muhammad Ali Sajjad') //provide your name here, no name, no marks
     }
     environment {
-        APP_VERSION = "1.0.0"
+        APP_VERSION = "1.1.0"
     }
     stages {
         stage('Install Dependencies') {
